@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Валидация данных
     if (!empty($name) && !empty($email) && !empty($message)) {
         // Отправка письма
-        $to = "your-email@example.com"; // Замените своим email
+        $to = "romka08100@yandex.ru"; // Замените своим email
         $subject = "Новое сообщение с формы обратной связи";
         $body = "ФИО: $name\nEmail: $email\nСообщение:\n$message";
         $headers = "From: $email\r\n";
