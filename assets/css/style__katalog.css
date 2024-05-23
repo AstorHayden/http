@@ -26,7 +26,9 @@ p {
   margin: 0 0 10px 0;
 }
 
-/* comtainer */
+
+
+
 
 .container {
   width: 100%;
@@ -36,16 +38,12 @@ p {
   position: relative;
 }
 
-/* header */
+
+
+
 
 .header {
   width: 100%;
-  /* height: 100px; */
-  /* position: absolute; */
-  /* left: 50%; */
-  /* transform: translateX(-50%); */
-  /* top: 0; */
-  /* z-index: 1000; */
   background-color: #393939;
 } 
 
@@ -53,8 +51,6 @@ p {
   display: flex;
   justify-content: space-between;
   padding: 35px 0;
-  /* border-bottom: 1px solid #ffffff; */
-
   align-items: center;
 }
 
@@ -94,10 +90,6 @@ p {
   min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.411);
   z-index: 1;
-  /* border-bottom: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  border-top: 1px solid #fff; */
 }
 
 .nav__dropdown a {
@@ -123,7 +115,8 @@ p {
 }
 
 
-/* intro */
+
+
 
 .intro {
   display: flex;
@@ -165,7 +158,8 @@ p {
 }
 
 
-/* batton */
+
+
 
 .btn {
   display: inline-block;
@@ -198,7 +192,9 @@ p {
   min-width: 280px;
 }
 
-/* info__line */
+
+
+
 
 .info__line {
   height: 150px;
@@ -226,7 +222,9 @@ p {
   line-height: 1.2;
 }
 
-/* fetures1 */
+
+
+
 
 .features1 {
   display: flex;
@@ -266,7 +264,8 @@ p {
 }
 
 
-/* testimonials */
+
+
 
 .reviews {
   background-color: aqua;
@@ -316,7 +315,9 @@ p {
   color: #fff;
 }
 
-/* features__info */
+
+
+
 
 .features__info{
   display: flex;
@@ -348,7 +349,9 @@ p {
   margin-top: 25px;
 }
 
-/* features */
+
+
+
 
 .features {
   display: flex;
@@ -395,7 +398,9 @@ p {
   color: black;
 }
 
-/* works */
+
+
+
 
 .work {
   display: flex;
@@ -467,7 +472,7 @@ p {
 
 
 
-/* team */
+
 
 .team {
   margin: 100px 0 70px 0;
@@ -517,7 +522,7 @@ p {
 
 
 
-/* download */
+
 
 .download {
   margin: 90px 0;
@@ -540,7 +545,8 @@ p {
 }
 
 
-/* adress panel */
+
+
 
 .adress__panel {
   background-color: #ffffff;
@@ -583,7 +589,7 @@ p {
 }
 
 .adress__p1 {
-  width: 33%; /* Adjust width accounting for padding */
+  width: 33%;
   padding: 30px;
   box-sizing: border-box;
   border-right: 1px solid #000000;
@@ -622,12 +628,8 @@ p {
   color: #00a4d6;
 }
 
-@media (max-width: 768px) {
-  .adress__p1 {
-      width: 100%; /* Full width on smaller screens */
-      border-right: none;
-  }
-}
+
+
 
 
 .contact__form {
@@ -661,10 +663,6 @@ p {
   flex-direction: column;
   justify-content: center;
 }
-
-
-
-
 
 .contact__form {
   background-color: #f0f0f0;
@@ -715,7 +713,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
-  height: 120px; /* Установим высоту, чтобы текстовое поле было больше */
+  height: 120px;
   margin-bottom: 10px;
 }
 .box__poli {
@@ -739,8 +737,6 @@ button {
 
 
 
-
-/* footer */
 
 .footer {
   background-color: #2C2C2C;

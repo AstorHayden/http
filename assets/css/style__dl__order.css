@@ -38,7 +38,9 @@ li::marker {
   display: flex;
 }
 
-/* comtainer */
+
+
+
 
 .container {
   width: 100%;
@@ -48,7 +50,9 @@ li::marker {
   position: relative;
 }
 
-/* header */
+
+
+
 
 .header {
   width: 100%;
@@ -125,6 +129,7 @@ li::marker {
 
 
 
+
 .dp__info {
   padding: 70px 0;
 }
@@ -137,7 +142,6 @@ li::marker {
 }
 
 .dp__text {
-  /* margin: 50px 0; */
   font-size: 16px;
 }
 
@@ -151,7 +155,6 @@ li::marker {
   display: flex;
   flex-wrap: wrap;
 }
-
 
 .dp__description__block {
   text-align: left;
@@ -169,7 +172,6 @@ li::marker {
 }
 
 .dp__text__block{
-  /* width: 50%; */
   margin-left: 20px;
 }
 
@@ -179,11 +181,10 @@ li::marker {
   margin: 0;
 }
 
-.discription__2 {
-  
-}
 
-/* batton */
+
+
+
 
 .btn {
   display: inline-block;
@@ -224,7 +225,9 @@ li::marker {
   min-width: 280px;
 }
 
-/* info__line */
+
+
+
 
 .dl__info__block {
   padding-bottom: 70px;
@@ -246,9 +249,6 @@ li::marker {
 .dp__info__block__text {
   padding: 25px 0 0 0 ;
 }
-
-
-
 
 .dl__info2__block {
   padding-bottom: 70px;
@@ -311,7 +311,7 @@ li::marker {
 }
 
 .adress__p1 {
-  width: 33%; /* Adjust width accounting for padding */
+  width: 33%;
   padding: 30px;
   box-sizing: border-box;
   border-right: 1px solid #000000;
@@ -350,14 +350,9 @@ li::marker {
   color: #00a4d6;
 }
 
-@media (max-width: 768px) {
-  .adress__p1 {
-      width: 100%; /* Full width on smaller screens */
-      border-right: none;
-  }
-}
 
-/* footer */
+
+
 
 .footer {
   background-color: #2C2C2C;

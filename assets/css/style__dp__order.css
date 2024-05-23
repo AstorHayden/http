@@ -26,7 +26,9 @@ p {
   margin: 0 0 10px 0;
 }
 
-/* comtainer */
+
+
+
 
 .container {
   width: 100%;
@@ -36,7 +38,9 @@ p {
   position: relative;
 }
 
-/* header */
+
+
+
 
 .header {
   width: 100%;
@@ -114,7 +118,6 @@ p {
 
 
 
-
 .dl__info {
   padding: 70px 0;
 }
@@ -160,11 +163,9 @@ p {
   font-size: 16px;
 }
 
-.discription__2 {
-  
-}
 
-/* batton */
+
+
 
 .btn {
   display: inline-block;
@@ -205,7 +206,9 @@ p {
   min-width: 280px;
 }
 
-/* info__line */
+
+
+
 
 .info__line {
   height: 150px;
@@ -232,7 +235,9 @@ p {
   line-height: 1.2;
 }
 
-/* slider */
+
+
+
 
 .features1 {
   display: flex;
@@ -273,7 +278,6 @@ p {
 
 .features__item1.active::after {
   width: 100%;
-  /* left: 0; */
 }
 
 .slides {
@@ -334,10 +338,12 @@ p {
   line-height: 1.5;
 }
 
-/* ========================== */
+
+
+
 
 .contact__form {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   padding: 80px;
   display: flex;
   justify-content: space-between;
@@ -396,17 +402,10 @@ textarea {
 .box__poli input {
   margin-right: 10px;
 }
-/* button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  align-self: flex-end;
-} */
 
-/* adress panel */
+
+
+
 
 .adress__panel {
   background-color: #ffffff;
@@ -449,7 +448,7 @@ textarea {
 }
 
 .adress__p1 {
-  width: 33%; /* Adjust width accounting for padding */
+  width: 33%;
   padding: 30px;
   box-sizing: border-box;
   border-right: 1px solid #000000;
@@ -488,14 +487,9 @@ textarea {
   color: #00a4d6;
 }
 
-@media (max-width: 768px) {
-  .adress__p1 {
-      width: 100%; /* Full width on smaller screens */
-      border-right: none;
-  }
-}
 
-/* footer */
+
+
 
 .footer {
   background-color: #2C2C2C;

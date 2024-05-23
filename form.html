@@ -24,10 +24,7 @@
                         <a class="nav__link" href="index.html">о компании</a>
                         <div class="nav__dropdown">
                             <a class="dropdown__text" href="dp__order.html">Департамент корпоративных продаж</a>
-                            <!-- <a class="dropdown__text" href="">Сервисный центр</a> -->
                             <a class="dropdown__text" href="dl__order.html">Дилерский отдел</a>
-                            <!-- <a class="dropdown__text" href="#">Партнеры</a>
-                            <a class="dropdown__text" href="#">Документы</a> -->
                         </div>
                     </div>
                     <a class="nav__link" href="katalog.html">каталог</a>
@@ -118,7 +115,7 @@
                     <p class="contact__item">Мы всегда открыты к диалогу и готовы предложить эксклюзивные условия сотрудничества!</p>
                 </div>
                 <div class="contact__panel">
-                    <form id="contactForm" action="contact.php" method="POST">
+                    <form id="contactForm" action="contact.php" method="POST" data-message-container="messageContainer">
                         <div class="box">
                             <input type="text" placeholder="ФИО*" name="name" required>
                             <input type="email" placeholder="E-mail*" name="email" required>
@@ -130,10 +127,13 @@
                         </div>
                         <button type="submit" class="btn btn--blue">Отправить</button>
                     </form>
+                    <div id="messageContainer" style="display: none;"></div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A7799e90fe4415bb7570fc998bf1fea468b3cb9f3ed6a3364c5716e83a6942c04&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
     
     <footer class="footer">
         <div class="container">
@@ -159,9 +159,6 @@
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
 
-    <script defer src="/_vercel/speed-insights/script.js">
-
-    </script>
 </body>
 
 </html>

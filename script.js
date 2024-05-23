@@ -25,16 +25,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// document.getElementById('contactForm').addEventListener('submit', function(event) {
-//     event.preventDefault();
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-//     var name = document.querySelector('input[name="name"]').value;
-//     var email = document.querySelector('input[name="email"]').value;
-//     var privacyCheck = document.getElementById('privacyCheck').checked;
+    var form = event.target;
+    var formData = new FormData(form);
+    var messageContainer = document.getElementById(form.getAttribute('data-message-container'));
 
-//     if (!name || !email || !privacyCheck) {
-//         alert('Пожалуйста, заполните все обязательные поля и подтвердите согласие с политикой конфиденциальности.');
-//     } else {
-//         alert('Форма успешно отправлена!');
-//     }
-// });
+    fetch(form.action, {
+        method: form.method,
+        body: formData
+    })
+    .then(response => response.text())
+    .then(responseText => {
+        messageContainer.style.display = 'block';
+        messageContainer.textContent = responseText;
+
+        if (responseText.trim() === "отправлено") {
+            form.style.display = 'none';
+        }
+    })
+    .catch(error => {
+        messageContainer.style.display = 'block';
+        messageContainer.textContent = "Произошла ошибка при отправке сообщения. Пожалуйста, попробуйте еще раз.";
+    });
+});
