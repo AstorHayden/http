@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -33,351 +33,315 @@
             </div>
         </div>
     </header>
+
+    <section class="product">
+        
+        <div class="container">
+            <div class="product__info">
+                <h1 class="product__title">Каталог</h1>
+                <h1 class="product__title product__title--gray">сколько то то товаров</h1>
+            </div>
+            <div class="product__filters">
+                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+                <select id="categoryFilter" onchange="filterProducts()">
+                    <option value="all">Все категории</option>
+                    <option value="desktops">Персональные компьютеры</option>
+                    <option value="laptops">Ноутбуки</option>
+                    <option value="printers">Принтеры</option>
+                    <option value="office">Офисная мебель</option>
+                    <option value="servers">Сервера</option>
+                    <option value="cameras">Системы видеонаблюдения</option>
+                </select>
+                <button id="resetCategoryFilter" onclick="resetCategory()" title="Сбросить фильтр">
+                    <img src="https://img.icons8.com/ios-filled/50/000000/restart--v1.png" alt="Reset Filter" style="width: 24px; height: 24px;">
+                </button>
+            </div>
+        </div>
     
 
-    <div class="intro">
-        <div class="container">
-            <div class="into__iner">
-                <h1 class="intro__title">Office domain is a new way to work</h1>
-                <h2 class="intro__subtitle">Office domain with your team and your company in a single place with a single sign on and a single password for all your devices and applications and a single identity for all your employees.</h2>
-                <a href="#" class="btn btn--red" href="#">GET STARTED</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="line">
-        <div class="conteiner">
-            <div class="line__block"> купи заебал </div>
-        </div>
-    </div>
 
-    <div class="info__line">
-        <div class="container">
 
-            <div class="info__line__inner"><p>ОСНОВНЫЕ НАПРАВЛЕНИЯ ДЕЯТЕЛЬНОСТИ</p></div>
-            <div class="info__line__text"><p>Мы предлагаем полный комплекс товаров, необходимых для обустройства любого делового помещения -</p>
-            <p> так называемый «офис под ключ», и являемся ведущим поставщиком IT-решений и оборудования на юге России.</p></div>
 
-        </div>
-    </div>
 
-    <div class="container">
-        <div class="features1">
-            <div class="features__item1">
-                <img class="features__icon1" src="assets/css/img/features/1.png" alt="">
-                <h4 class="features__title1">Системная интеграция</h4>
-            </div>
 
-            <div class="features__item1">
-                <img class="features__icon1" src="assets/css/img/features/2.png" alt="">
-                <h4 class="features__title1">Печатная техника</h4>
-            </div>
 
-            <div class="features__item1">
-                <img class="features__icon1" src="assets/css/img/features/3.png" alt="">
-                <h4 class="features__title1">Программное обеспечение</h4>
-            </div>
 
-            <div class="features__item1">
-                <img class="features__icon1" src="assets/css/img/features/4.png" alt="">
-                <h4 class="features__title1">Офисная мебель</h4>
-            </div>
 
-            <div class="features__item1">
-                <img class="features__icon1" src="assets/css/img/features/5.png" alt="">
-                <h4 class="features__title1">Разработка ПО</h4>
-            </div>
 
-            <div class="features__item1">
-                <img class="features__icon1" src="assets/css/img/features/6.png" alt="">
-                <h4 class="features__title1">Компьютер и серверы</h4>
-            </div>
-        </div>
-    </div>
 
-    <div class="reviews">
-        <div class="container">
-            
-            <div class="reviews__item">
-                <div class="reviews__photo">
-                    <img class="reviews__img" src="assets/css/img/testimonials/1.jpg" alt="">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="cards" id="productCards">
+            <div class="card" data-category="desktops">
+                <div class="card__top">
+                    <a href="#" class="card__image">
+                        <img src="https://demo.codelab.pro/examples/product-cards/images/iphone-14-pro-max-gold.png" alt="Apple IPhone 14 PRO Max Gold" />
+                    </a>
+                    <button class="card__like"></button>
                 </div>
-                <div class="reviews__content">
-                    <div class="reviews__text">Залупа ебаная я ебал это всё тут жить от силы осталось неделю.</div>
-                    <div class="reviews__avtor">Далбаёб на фото.</div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="features__info">
-        <div class="container">
-            <div class="features__info__inner">
-                <h1>Департамент корпоротивных продаж</h1>
-            </div>
-            <div class="features__info__text">
-                Услугами департамента корпоративных продаж пользуются более 7000 клиентов на Юге России. Мы рады предложить нашим заказчикам:
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="features__photo__container">
-            <img class="features__photo" src="assets/css/img/features/consultant1.png" alt="">
-        </div>
-        <div class="features">
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/1.png" alt="">
-                <h4 class="features__title">ШИРОКИЙ АССОРТИМЕНТ</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/2.png" alt="">
-                <h4 class="features__title">ОФИСНЫЕ РЕШЕНИЯ "ПОД КЛЮЧ"</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/3.png" alt="">
-                <h4 class="features__title">ГИБКАЯ СИСТЕМА СКИДОК И РАБОТА ПОД ЗАКАЗ</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/4.png" alt="">
-                <h4 class="features__title">БЕСПЕРЕБОЙНОЕ НАЛИЧИЕ ТОВАРОВ НА СКЛАДЕ</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/5.png" alt="">
-                <h4 class="features__title">ОТРАСЛЕВЫЕ КОМПЛЕКСНЫЕ ПОСТАВКИЕ</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/6.png" alt="">
-                <h4 class="features__title">ПЕРСОНАЛЬНЫЙ КВАЛИФИЦИРОВАННЫЙ МЕНЕДЖЕР</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/6.png" alt="">
-                <h4 class="features__title">ОБУЧАЮЩИЕ СЕМИНАРЫ-ТРЕНИНГИ</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/6.png" alt="">
-                <h4 class="features__title">УДОБНОЕ РАСПОЛОЖЕНИЕ И ОХРАНЯЕМЫЕ ПАРКОВКИ</h4>
-            </div>
-
-            <div class="features__item">
-                <img class="features__icon" src="assets/css/img/features/6.png" alt="">
-                <h4 class="features__title">ЭЛЕКТРОННЫЙ КАТАЛОГ ТОВАРОВ</h4>
-            </div>
-            
-        </div>
-    </div>
-
-    <div class="work">
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-        <div class="works__item">
-            <img class="work__photo" src="assets/css/img/work/1.jpg" alt="">
-            <div class="works__content">
-                <div class="works__title"> Я помнию ПЕНИС большой</div>
-                <div class="works_text">Я помню пенис БОЛЬШОЙ такой ПЕНИС</div>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="team">
-        <div class="container">
-            <div class="team__iner">
-
-                <div class="team_item">
-                    <img class="team__photo" src="assets/css/img/team/1.jpg" alt="">
-                    <div class="team__name">ДАЛБАЁБ</div>
-                    <div class="team__prof">пинает хуи</div>
-                    <div class="team_text">
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
+                <div class="card__bottom">
+                    <div class="card__prices">
+                        <div class="card__price card__price--common">150 000</div>
                     </div>
-                    <div class="team_social">каста петухов</div>
+                    <a href="#" class="card__title">Desctop</a>
+                    <button class="card__add" onclick="openProductPopup()">Заказать</button>
                 </div>
-
-                <div class="team_item">
-                    <img class="team__photo" src="assets/css/img/team/1.jpg" alt="">
-                    <div class="team__name">ДАЛБАЁБ</div>
-                    <div class="team__prof">пинает хуи</div>
-                    <div class="team_text">
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
+            </div>
+        </div>
+        
+        <div id="productPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('productPopup')">&times;</span>
+                
+                <!-- First container: Image -->
+                <div class="container-top-left">
+                    <img src="https://demo.codelab.pro/examples/product-cards/images/iphone-14-pro-max-gold.png" alt="Product Image" class="popup-image" />
+                </div>
+                
+                <!-- Second container: Title, Order Button, Feature Selection -->
+                <div class="container-top-right">
+                    <h2>Desctop</h2>
+                    <div class="price-order-container">
+                        <div class="popup-price">17 899 ₽</div>
+                        <button class="popup-order" onclick="openContactForm()">Заказать</button>
                     </div>
-                    <div class="team_social">каста петухов</div>
                 </div>
-
-                <div class="team_item">
-                    <img class="team__photo" src="assets/css/img/team/1.jpg" alt="">
-                    <div class="team__name">ДАЛБАЁБ</div>
-                    <div class="team__prof">пинает хуи</div>
-                    <div class="team_text">
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
+                
+                <!-- Third container: Detailed Specifications -->
+                <div class="container-bottom">
+                    <h3>Характеристики 14.1" Ноутбук DEXP Aquilon серебристый</h3>
+                    <div class="spec-section">
+                        <h4>Заводские данные</h4>
+                        <p><span class="spec-name">Гарантия продавца:</span> <span class="spec-value">12 мес.</span></p>
                     </div>
-                    <div class="team_social">каста петухов</div>
-                </div>
-
-                <div class="team_item">
-                    <img class="team__photo" src="assets/css/img/team/1.jpg" alt="">
-                    <div class="team__name">ДАЛБАЁБ</div>
-                    <div class="team__prof">пинает хуи</div>
-                    <div class="team_text">
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
-                        <p>я помню пенис БОЛЬШОЙ такой ПЕНИС</p>
+                    <div class="spec-section">
+                        <h4>Классификация</h4>
+                        <p><span class="spec-name">Тип:</span> <span class="spec-value">ноутбук</span></p>
+                        <p><span class="spec-name">Модель:</span> <span class="spec-value">DEXP Aquilon</span></p>
+                        <p><span class="spec-name">Линейка:</span> <span class="spec-value">DEXP Aquilon</span></p>
+                        <p><span class="spec-name">Код производителя:</span> <span class="spec-value">[C14-ICW300]</span></p>
+                        <p><span class="spec-name">Год релиза:</span> <span class="spec-value">2023</span></p>
+                        <p><span class="spec-name">Игровой ноутбук:</span> <span class="spec-value">нет</span></p>
                     </div>
-                    <div class="team_social">каста петухов</div>
+                    <div class="spec-section">
+                        <h4>Операционная система</h4>
+                        <p><span class="spec-name">Операционная система:</span> <span class="spec-value">Windows 11 Home</span></p>
+                        <p><span class="spec-name">Семейство:</span> <span class="spec-value">Windows</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Внешний вид</h4>
+                        <p><span class="spec-name">Конструктивное исполнение:</span> <span class="spec-value">классический</span></p>
+                        <p><span class="spec-name">Цвет верхней крышки:</span> <span class="spec-value">серебристый</span></p>
+                        <p><span class="spec-name">Цвет, заявленный производителем:</span> <span class="spec-value">Silver</span></p>
+                        <p><span class="spec-name">Материал крышки:</span> <span class="spec-value">пластик</span></p>
+                        <p><span class="spec-name">Материал корпуса:</span> <span class="spec-value">пластик</span></p>
+                        <p><span class="spec-name">Раскрытие крышки:</span> <span class="spec-value">стандартное</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Экран</h4>
+                        <p><span class="spec-name">Тип экрана:</span> <span class="spec-value">IPS</span></p>
+                        <p><span class="spec-name">Диагональ экрана:</span> <span class="spec-value">14.1"</span></p>
+                        <p><span class="spec-name">Разрешение экрана:</span> <span class="spec-value">Full HD (1920x1080)</span></p>
+                        <p><span class="spec-name">Покрытие экрана:</span> <span class="spec-value">матовое</span></p>
+                        <p><span class="spec-name">Максимальная частота обновления экрана:</span> <span class="spec-value">60 Гц</span></p>
+                        <p><span class="spec-name">Яркость:</span> <span class="spec-value">250 Кд/м²</span></p>
+                        <p><span class="spec-name">Плотность пикселей:</span> <span class="spec-value">157 ppi</span></p>
+                        <p><span class="spec-name">Цветовой охват:</span> <span class="spec-value">NTSC 45%</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Процессор</h4>
+                        <p><span class="spec-name">Модель процессора:</span> <span class="spec-value">Intel Celeron N4020C</span></p>
+                        <p><span class="spec-name">Общее количество ядер:</span> <span class="spec-value">2</span></p>
+                        <p><span class="spec-name">Частота процессора:</span> <span class="spec-value">1.1 ГГц</span></p>
+                        <p><span class="spec-name">Автоматическое увеличение частоты:</span> <span class="spec-value">2.2 ГГц</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Оперативная память</h4>
+                        <p><span class="spec-name">Тип оперативной памяти:</span> <span class="spec-value">DDR4</span></p>
+                        <p><span class="spec-name">Объем оперативной памяти:</span> <span class="spec-value">8 ГБ</span></p>
+                        <p><span class="spec-name">Частота оперативной памяти:</span> <span class="spec-value">2400 МГц</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Графический ускоритель</h4>
+                        <p><span class="spec-name">Вид графического ускорителя:</span> <span class="spec-value">встроенный</span></p>
+                        <p><span class="spec-name">Модель видеокарты:</span> <span class="spec-value">Intel UHD Graphics 600</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Накопители данных</h4>
+                        <p><span class="spec-name">Общий объем SSD:</span> <span class="spec-value">256 ГБ</span></p>
+                        <p><span class="spec-name">Тип SSD:</span> <span class="spec-value">M.2 PCIe (2280)</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Встроенное оборудование</h4>
+                        <p><span class="spec-name">Веб-камера:</span> <span class="spec-value">2 Мп (1080p)</span></p>
+                        <p><span class="spec-name">Встроенный микрофон:</span> <span class="spec-value">есть</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Интернет/передача данных</h4>
+                        <p><span class="spec-name">Беспроводной интерфейс:</span> <span class="spec-value">Bluetooth 5.0, WI-FI 5 (802.11ac)</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Разъемы периферии</h4>
+                        <p><span class="spec-name">HDMI:</span> <span class="spec-value">1.4</span></p>
+                        <p><span class="spec-name">Аудиоразъемы:</span> <span class="spec-value">3.5 мм jack (микрофон/аудио)</span></p>
+                        <p><span class="spec-name">USB:</span> <span class="spec-value">USB 2.0, USB 3.2 Gen1 x2</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Питание</h4>
+                        <p><span class="spec-name">Тип аккумулятора:</span> <span class="spec-value">Li-Pol</span></p>
+                        <p><span class="spec-name">Емкость аккумулятора:</span> <span class="spec-value">38 Вт*ч, 5000 мА*ч</span></p>
+                        <p><span class="spec-name">Время автономной работы:</span> <span class="spec-value">до 8 ч</span></p>
+                    </div>
+                    <div class="spec-section">
+                        <h4>Габариты, вес</h4>
+                        <p><span class="spec-name">Глубина:</span> <span class="spec-value">219.9 мм</span></p>
+                        <p><span class="spec-name">Ширина:</span> <span class="spec-value">323.4 мм</span></p>
+                        <p><span class="spec-name">Толщина:</span> <span class="spec-value">19.9 мм</span></p>
+                        <p><span class="spec-name">Вес:</span> <span class="spec-value">1.452 кг</span></p>
+                    </div>
                 </div>
+            </div>
+        </div>
 
+<!-- Contact Form Popup -->
+<div id="contactFormPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('contactFormPopup')">&times;</span>
+        <div class="contact__form">
+            <div class="container">
+                <div class="contact__box">
+                    <div class="contact__text">
+                        <h1 class="contact__glav">Свяжитесь с нами</h1>
+                        <p class="contact__item">Мы всегда открыты к диалогу и готовы предложить эксклюзивные условия сотрудничества!</p>
+                    </div>
+                    <div class="contact__panel">
+                        <form id="contactForm" action="contact.php" method="POST" data-message-container="messageContainer">
+                            <div class="box">
+                                <input type="text" placeholder="ФИО*" name="name" required>
+                                <input type="email" placeholder="E-mail*" name="email" required>
+                            </div>
+                            <textarea placeholder="Сообщение" name="message" rows="4" required></textarea>
+                            <div class="box__poli">
+                                <input type="checkbox" id="privacyCheck" required>
+                                <label for="privacyCheck">С настоящей <a href="#">политикой конфиденциальности</a> и ее условиями ознакомлен и согласен.</label>
+                            </div>
+                            <button type="submit" class="btn btn--blue">Отправить</button>
+                        </form>
+                        <div id="messageContainer" style="display: none;"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="download">
-        <div class="container">
-            <h3 class="download__title">Скачать</h3>
-            <div class="download__text">
-                <p>xyi xyi xyi xyi</p>
-            </div>
-            <a class="btn btn--red btn--long" href="#">Скачай хуй</a>
-        </div>
-    </div>
+<!-- JavaScript to handle popup -->
+<script>
+function openPopup(popupId) {
+    document.getElementById(popupId).style.display = 'block';
+}
 
-    <div class="adress__panel">
-        <div class="container">
-            <h3 class="adress__title">Адреса филиалов</h3>
-            <div class="adress__inner">
-                <div class="adress__list">
-                    <div class="adress__track">
+function closePopup(popupId) {
+    document.getElementById(popupId).style.display = 'none';
+}
+</script>
+
+        
+    </section>
     
-                        <div class="adress__p1">
-                            <ul class="contact">
-                                <li class="block caption"><i class="fas fa-map-marker-alt"></i> Ростов-на-Дону</li>
-                                <li class="block adress"><i class="fas fa-home"></i> г. Ростов-на-Дону, Улица Пушкина Дом Колотушкина/1</li>
-                                <li class="block phone"><i class="fas fa-phone"></i> 8-425-485-10-81</li>
-                                <li class="block email"><i class="fas fa-envelope"></i> Rabochka@yandex.ru</li>
-                                <li class="block graf"><i class="fas fa-clock"></i> пн-пт: 09:00 - 18:00</li>
-                            </ul>
-                        </div>
+        
 
-                        <div class="adress__p1">
-                            <ul class="contact">
-                                <li class="block caption"><i class="fas fa-map-marker-alt"></i> Ростов-на-Дону</li>
-                                <li class="block adress"><i class="fas fa-home"></i> г. Ростов-на-Дону, Улица Пушкина Дом Колотушкина/1</li>
-                                <li class="block phone"><i class="fas fa-phone"></i> 8-425-485-10-81</li>
-                                <li class="block email"><i class="fas fa-envelope"></i> Rabochka@yandex.ru</li>
-                                <li class="block graf"><i class="fas fa-clock"></i> пн-пт: 09:00 - 18:00</li>
-                            </ul>
-                        </div>
 
-                        <div class="adress__p1">
-                            <ul class="contact">
-                                <li class="block caption"><i class="fas fa-map-marker-alt"></i> Ростов-на-Дону</li>
-                                <li class="block adress"><i class="fas fa-home"></i> г. Ростов-на-Дону, Улица Пушкина Дом Колотушкина/1</li>
-                                <li class="block phone"><i class="fas fa-phone"></i> 8-425-485-10-81</li>
-                                <li class="block email"><i class="fas fa-envelope"></i> Rabochka@yandex.ru</li>
-                                <li class="block graf"><i class="fas fa-clock"></i> пн-пт: 09:00 - 18:00</li>
-                            </ul>
-                        </div>
 
-                        <div class="adress__p1">
-                            <ul class="contact">
-                                <li class="block caption"><i class="fas fa-map-marker-alt"></i> Ростов-на-Дону</li>
-                                <li class="block adress"><i class="fas fa-home"></i> г. Ростов-на-Дону, Улица Пушкина Дом Колотушкина/1</li>
-                                <li class="block phone"><i class="fas fa-phone"></i> 8-425-485-10-81</li>
-                                <li class="block email"><i class="fas fa-envelope"></i> Rabochka@yandex.ru</li>
-                                <li class="block graf"><i class="fas fa-clock"></i> пн-пт: 09:00 - 18:00</li>
-                            </ul>
-                        </div>
 
-                        <div class="adress__p1">
-                            <ul class="contact">
-                                <li class="block caption"><i class="fas fa-map-marker-alt"></i> Ростов-на-Дону</li>
-                                <li class="block adress"><i class="fas fa-home"></i> г. Ростов-на-Дону, Улица Пушкина Дом Колотушкина/1</li>
-                                <li class="block phone"><i class="fas fa-phone"></i> 8-425-485-10-81</li>
-                                <li class="block email"><i class="fas fa-envelope"></i> Rabochka@yandex.ru</li>
-                                <li class="block graf"><i class="fas fa-clock"></i> пн-пт: 09:00 - 18:00</li>
-                            </ul>
-                        </div>
 
-                        <div class="adress__p1">
-                            <ul class="contact">
-                                <li class="block caption"><i class="fas fa-map-marker-alt"></i> Ростов-на-Дону</li>
-                                <li class="block adress"><i class="fas fa-home"></i> г. Ростов-на-Дону, Улица Пушкина Дом Колотушкина/1</li>
-                                <li class="block phone"><i class="fas fa-phone"></i> 8-425-485-10-81</li>
-                                <li class="block email"><i class="fas fa-envelope"></i> Rabochka@yandex.ru</li>
-                                <li class="block graf"><i class="fas fa-clock"></i> пн-пт: 09:00 - 18:00</li>
-                            </ul>
-                        </div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <footer class="footer">
         <div class="container">
@@ -398,10 +362,18 @@
     </footer>
     
     <script src="script.js"></script>
+
+    <script src="./scripts/main.js"></script>
+
     <script>
         window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/speed-insights/script.js"></script>
+    </script>
+
+    <script src="https://imdiz.ru/files/store/js/jquery-3.3.1.min.js"></script>
+    <script src="https://imdiz.ru/files/store/js/jquery-ui.js"></script>
+    <script src="https://imdiz.ru/files/store/js/owl.carousel.js"></script>
+    <script src="https://imdiz.ru/files/store/js/script.js"></script>
+
 </body>
 
-</html> -->
+</html>

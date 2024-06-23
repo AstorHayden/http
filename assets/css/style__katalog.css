@@ -118,49 +118,6 @@ p {
 
 
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 980px;
-  padding-top: 100px;
-  background-image: url("img/into.jpg"); 
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #2a98ff;
-}
-
-.into__iner {
-  min-width: 970px;
-  width: 100px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.intro__title {
-  margin: 0 0 30px 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 65px;
-  line-height: 1.1;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.intro__subtitle {
-  margin: 0 0 30px 0;
-  font-style: 22px;
-  color: #fff;
-  line-height: 1.5;
-  font-weight: 400;
-}
-
-
-
-
-
 .btn {
   display: inline-block;
   vertical-align: top;
@@ -184,6 +141,14 @@ p {
   background-color: #ff0000;
 }
 
+.btn--blue {
+  background-color: #009DF5;
+}
+
+.btn--blue:hover {
+  background-color: #0088d6;
+}
+
 .btn--red:hover {
   background-color: #ca0606;
 }
@@ -196,473 +161,595 @@ p {
 
 
 
-.info__line {
-  height: 150px;
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+*:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
 }
 
-.info__line__inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 100px;
-
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-size: 36px;
-  line-height: 1.2;
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.info__line__text {
-  margin-top: 20px;
-
-  text-align: center;
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 1.2;
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
 }
 
-
-
-
-
-.features1 {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 25px 0;
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
 }
 
-.features__item1 { 
-  width: 16%;
-  margin: 25px 0;
-
-  text-align: center;
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
 }
 
-.features__icon1 {
-  margin-bottom: 25px;
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
 }
 
-.features__title1 {
-  font-style: 14px;
-  color: #000000;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  margin-bottom: 10px;
-} 
-
- .features__text1 {
-  font-style: 14px;
-  line-height: 1.5;
-  color: black;
-} 
-
-.features__icon1:hover + .features__title1 + .features__text1 {
-  border-bottom: 3px solid #ff0000;
-  border-radius: 3px;
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
 }
 
-
-
-
-
-.reviews {
-  background-color: aqua;
-  overflow: hidden;
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
 }
 
-.reviews__item {
-  display: flex;
-  flex-wrap: wrap;
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
 }
 
-.reviews__photo {
-  width: 50%;
-  height: 536px;
-  position: relative;
+/* preformatted text - use only for this feature */
+pre {
+  all: revert;
 }
 
-.reviews__img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
+/* reset default text opacity of input placeholder */
+::-webkit-input-placeholder {
+  color: unset;
+}
+::-moz-placeholder {
+  color: unset;
+}
+:-ms-input-placeholder {
+  color: unset;
+}
+::-ms-input-placeholder {
+  color: unset;
+}
+::placeholder {
+  color: unset;
 }
 
-.reviews__content {
-  width: 50%;
-  padding: 0 80px;
+/* remove default dot (•) sign */
+::marker {
+  content: "";
+}
+
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly.
+   - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+}
+
+.product {
+  padding: 50px 0;
+}
+.product__info {
+  margin-bottom: 40px;
+}
+.product__title {
+  display: inline-block;
+  font-size: 2rem;
+  margin-right: 7px;
+}
+.product__title--gray {
+  color: #b3b3b7;
+}
+
+.card {
+  width: 225px;
+  min-height: 350px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.reviews__text {
-  font-family: "Open Sans", sans-serif;
-  font-style: italic;
-  font-size: 36px;
-  line-height: 1.2;
-  color: #fff;
-}
-
-.reviews__avtor {
-  margin-top: 20px;
-
-  font-style: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-
-
-
-
-.features__info{
-  display: flex;
-  height: 200px;
-  
-  padding-top: 80px;
-  margin-bottom: 35px;
-}
-
-.features__info__inner {
-  font-family: "Open Sans", sans-serif;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1.2;
-  color: #000000;
-  text-transform: uppercase;
-
-  text-align: center;
-}
-
-.features__info__text {
-  font-family: "Open Sans", sans-serif;
-  font-size: 20px;
-  color: #000000;
-  font-weight: 600;
-
-  text-align: center;
-
-  margin-top: 25px;
-}
-
-
-
-
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0px 0;
-}
-
-.features__photo__container {
-  position: absolute;
-  right: -350px;
-  top: -133px;
-}
-
-.features__photo {
-  width: auto; 
-  height: auto; 
-  max-width: 100%; 
-}
-
-.features__item { 
-  width: 33%;
-  padding: 0 20px;
-  margin: 25px 0;
-
-  text-align: center;
-}
-
-.features__icon {
-  margin-bottom: 25px;
-}
-
-.features__title {
-  font-style: 14px;
-  color: #000000;
-  font-weight: 700;
-  text-transform: uppercase;
-
-  margin-bottom: 20px;
-}
-
-.features__text {
-  font-style: 14px;
-  line-height: 1.5;
-  color: black;
-}
-
-
-
-
-
-.work {
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-top: 80px;
-}
-
-.works__item {
-  width: 25%;
-  height: 350px;
+  border-radius: 4px;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   position: relative;
-  overflow: hidden;
-
-  border-bottom: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
-}
-
-.works__item:hover .works__content{
   opacity: 1;
+  transform: scale(1) translateY(0);
 }
 
-.work__photo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-
-  transform: translate(-50%, -50%);
-}
-
-.works__content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-
+.card.hidden {
   opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  pointer-events: none;
+}
 
-  background-color: rgba(226, 36, 36, 0.8);
+.card.visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 225px);
+  width: 100%;
+  max-width: 1245px; /* 5 * 225px + 4 * 30px */
+  justify-content: center;
+  justify-items: center;
+  column-gap: 30px;
+  row-gap: 40px;
+  margin: 0 auto;
+}
+
+.card .card__label {
+  padding: 4px 8px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: #ff6633;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+}
+.card:hover {
+  -webkit-box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+          box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+}
+.card__top {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 220px;
+          flex: 0 0 220px;
+  position: relative;
+  overflow: hidden;
+}
+.card__image {
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
-
-  transition: opacity .2s linear;
+  width: 100%;
+  height: 100%;
 }
-
-.works__title {
-  margin-bottom: 5px;
-
-  font-style: 14px;
-  color: #ffffff;
-  font-weight: 700;
-  text-transform: uppercase;
+.card__image > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
-
-.works_text {
-  font-style: 14px;
-  color: #ffffff;
+.card__image:hover > img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
-
-.works__content:hover {
-  opacity: 1;
-  transition: opacity .2s linear;
-}
-
-
-
-
-
-.team {
-  margin: 100px 0 70px 0;
-
-}
-
-.team__iner {
+.card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 -15px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  padding: 10px;
 }
-
-.team_item {
-  width: 25%;
-  padding: 0 15px;
-  margin-bottom: 30px;
+.card__prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
 }
-
-.team__photo {
+.card__price {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+.card__price:after {
+  content: "₽";
+  margin-left: 4px;
+  position: relative;
+}
+.card__price--discount {
+  font-weight: 700;
+  font-size: 19px;
+  color: #414141;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+.card__price--discount::before {
+  content: "Со скидкой";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+.card__price--common {
+  font-weight: 400;
+  font-size: 17px;
+  color: #606060;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          /* justify-content: flex-end; */
+}
+.card__price--common::before {
+  content: "Обычная";
+  font-weight: 400;
+  font-size: 13px;
+  color: #bfbfbf;
+}
+.card__title {
   display: block;
-  max-width: 100%;
-  height: auto;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 150%;
+  color: #414141;
+}
+.card__title:hover {
+  color: #ff6633;
+}
+.card__add {
+  display: block;
+  width: 100%;
+  font-weight: 400;
+  font-size: 17px;
+  color: #70c05b;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #70c05b;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: auto;
+}
+.card__add:hover {
+  border: 1px solid #ff6633;
+  background-color: #ff6633;
+  color: #fff;
+}
 
+
+.product__filters {
+  display: flex;
+  gap: 10px;
   margin-bottom: 20px;
 }
 
-.team__name {
-  font-style: 22px;
-  color: #000000;
-
-  margin-bottom: 8px;
+#searchInput {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  width: 200px;
 }
 
-.team__prof {
-  font-style: 13px;
-  color: #dd1616;
-  text-transform: uppercase;
-
-  margin-bottom: 13px;
+#categoryFilter {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
 }
 
-.team_text {
-  font-style: 14px;
-  color: #000000;
-  line-height: 1.5;
-}
-
-
-
-
-
-.download {
-  margin: 90px 0;
-  text-align: center;
-}
-
-.download__title {
-  font-style: 28px;
-  color: #000000;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-.download__text {
-  font-style: 13px;
-  color: #000000;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 30px;
-}
-
-
-
-
-
-.adress__panel {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 80px 0;
-}
-
-.adress__title {
-  font-size: 36px;
-  text-align: left;
-  margin-bottom: 30px;
-
-  font-family: "Open Sans", sans-serif;
-  text-transform: uppercase;
-}
-
-.adress__inner {
-  display: flex;
-  justify-content: center;
-}
-
-.adress__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-}
-
-.adress__track {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.adress__pointer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.adress__p1 {
-  width: 33%;
-  padding: 30px;
-  box-sizing: border-box;
-  border-right: 1px solid #000000;
-  border-left: 1px solid #000000;
-  margin-bottom: 40px;
-}
-
-.contact {
-  list-style: none;
+#resetCategoryFilter {
+  background: none;
+  border: none;
+  cursor: pointer;
   padding: 0;
-  margin: 0;
-}
-
-.block {
-  margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
-.block i {
-  margin-right: 10px;
+
+
+
+
+
+
+
+/* General popup styling */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.caption {
+.popup-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 40px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-areas:
+      "top-left top-right"
+      "bottom bottom";
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  color: #aaa;
+  font-size: 40px;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #0085AF;
+  cursor: pointer;
 }
 
-.caption, .adress, .phone, .email, .graf {
-  padding-left: 10px;
-  padding: 5px;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.fa-map-marker-alt, .fa-home, .fa-phone, .fa-envelope, .fa-clock {
-  color: #00a4d6;
+/* Only updating relevant styles for the right-top container */
+.container-top-right {
+  grid-area: top-right;
+  text-align: center;
 }
 
+.container-top-right h2 {
+  margin-bottom: 20px; /* Space below the title */
+}
 
+.price-order-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
+.popup-price {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px; /* Space between the price and the order button */
+}
 
+.popup-order {
+  background-color: #70c05b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
 
+.popup-order:hover {
+  background-color: #5aa046;
+}
+
+.popup-features {
+  margin-bottom: 20px;
+}
+
+.feature-section {
+  margin-bottom: 20px; /* Space between feature sections */
+}
+
+.feature-section h3 {
+  margin: 0;
+  margin-bottom: 10px; /* Space below the headings */
+}
+
+.feature-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between radio button labels */
+}
+
+.feature-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between the radio button and the label text */
+}
+
+.container-top-left {
+  grid-area: top-left;
+}
+
+.popup-image {
+  width: 100%;
+}
+
+/* Retain existing styles for other elements */
+.container-bottom {
+  grid-area: bottom;
+  margin-top: 50px;
+  padding-left: 90px;
+}
+
+.spec-section {
+  margin-bottom: 40px; /* Larger space below each section for readability */
+  padding-bottom: 10px; /* Space below the section content */
+}
+
+.spec-section h4 {
+  margin-bottom: 20px; /* Large space below the headings */
+}
+
+.spec-section p {
+  margin: 0 0 20px; /* Space between paragraphs */
+  display: flex;
+  align-items: center;
+}
+
+.spec-section .spec-name {
+  width: 600px;
+  border-bottom: 1px dotted #ddd; /* Dotted gray line */
+  padding-bottom: 5px; /* Space between the text and the line */
+  display: inline-block;
+  margin-right: 10px; /* Space between the name and value */
+}
+
+.spec-section .spec-value {
+  display: inline-block;
+}
+
+/* Contact form styling */
 .contact__form {
-  background-color: #e8e8e8;
-}
-
-.contact__inner {
+  background-color: #f0f0f0;
+  padding: 40px;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.contact__glav {
-
-}
-
-.contact__row {
+.contact__box {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact__text {
-  display: flex;
-  width: 50%;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact__glav {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+}
+
+.contact__item {
+  font-size: 18px;
 }
 
 .contact__panel {
   display: flex;
-  width: 50%;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.box input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 48%;
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+}
+
+.box__poli {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.box__poli input {
+  margin-right: 10px;
+}
+
+.btn--blue {
+  background-color: #70c05b;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn--blue:hover {
+  background-color: #5aa046;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .contact__form {
   background-color: #f0f0f0;
@@ -723,15 +810,6 @@ textarea {
 }
 .box__poli input {
   margin-right: 10px;
-}
-button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  align-self: flex-end;
 }
 
 
