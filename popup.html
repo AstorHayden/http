@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <link rel="stylesheet" href="style__popup.css">
+</head>
+<body>
+<div id="productPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('productPopup')">&times;</span>
+        <div class="container-top">
+            <div class="container-top-left">
+                <img src="" alt="Product Image" class="popup-image" id="popupImage" />
+            </div>
+            <div class="container-top-right">
+                <h2 id="popupTitle">Title</h2>
+                <div class="price-order-container">
+                    <div class="popup-price" id="popupPrice">Price</div>
+                    <button class="popup-order" onclick="openContactForm()">Order</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-bottom" id="popupSpecifications">
+            <!-- Dynamic Content Here -->
+        </div>
+    </div>
+</div>
+
+<!-- Popup content for each product -->
+<div id="desctop-popup-content" style="display: none;">
+    <div class="popup-content-inner">
+        <h2>Desctop</h2>
+        <div class="price-order-container">
+            <div class="popup-price">150 000 ₽</div>
+            <button class="popup-order" onclick="openContactForm()">Заказать</button>
+        </div>
+        <h3>Характеристики Desctop</h3>
+        <div class="spec-section">
+            <h4>Заводские данные</h4>
+            <p><span class="spec-name">Гарантия продавца:</span> <span class="spec-value">12 мес.</span></p>
+        </div>
+        <div class="spec-section">
+            <h4>Классификация</h4>
+            <p><span class="spec-name">Тип:</span> <span class="spec-value">Персональный компьютер</span></p>
+            <p><span class="spec-name">Модель:</span> <span class="spec-value">Desctop 2024</span></p>
+            <p><span class="spec-name">Год релиза:</span> <span class="spec-value">2024</span></p>
+        </div>
+        <div class="spec-section">
+            <h4>Операционная система</h4>
+            <p><span class="spec-name">Операционная система:</span> <span class="spec-value">Windows 11 Pro</span></p>
+        </div>
+        <div class="spec-section">
+            <h4>Процессор</h4>
+            <p><span class="spec-name">Модель процессора:</span> <span class="spec-value">Intel Core i7</span></p>
+            <p><span class="spec-name">Количество ядер:</span> <span class="spec-value">8</span></p>
+            <p><span class="spec-name">Частота процессора:</span> <span class="spec-value">3.6 ГГц</span></p>
+        </div>
+        <!-- Добавьте другие характеристики по мере необходимости -->
+    </div>
+</div>
+
+<div id="laptops-popup-content" style="display: none;">
+    <div class="popup-content-inner">
+        <h2>Laptops</h2>
+        <div class="price-order-container">
+            <div class="popup-price">140 000 ₽</div>
+            <button class="popup-order" onclick="openContactForm()">Заказать</button>
+        </div>
+        <h3>Характеристики Laptops</h3>
+        <div class="spec-section">
+            <h4>Заводские данные</h4>
+            <p><span class="spec-name">Гарантия продавца:</span> <span class="spec-value">12 мес.</span></p>
+        </div>
+        <div class="spec-section">
+            <h4>Классификация</h4>
+            <p><span class="spec-name">Тип:</span> <span class="spec-value">Ноутбук</span></p>
+            <p><span class="spec-name">Модель:</span> <span class="spec-value">Laptop 2024</span></p>
+            <p><span class="spec-name">Год релиза:</span> <span class="spec-value">2024</span></p>
+        </div>
+        <div class="spec-section">
+            <h4>Операционная система</h4>
+            <p><span class="spec-name">Операционная система:</span> <span class="spec-value">Windows 11 Home</span></p>
+        </div>
+        <div class="spec-section">
+            <h4>Процессор</h4>
+            <p><span class="spec-name">Модель процессора:</span> <span class="spec-value">Intel Core i5</span></p>
+            <p><span class="spec-name">Количество ядер:</span> <span class="spec-value">4</span></p>
+            <p><span class="spec-name">Частота процессора:</span> <span class="spec-value">2.4 ГГц</span></p>
+        </div>
+        <!-- Добавьте другие характеристики по мере необходимости -->
+    </div>
+</div>
+
+<!-- Contact Form Popup -->
+<div id="contactFormPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup('contactFormPopup')">&times;</span>
+        <div class="contact__form">
+            <div class="container">
+                <div class="contact__box">
+                    <div class="contact__text">
+                        <h1 class="contact__glav">Свяжитесь с нами</h1>
+                        <p class="contact__item">Мы всегда открыты к диалогу и готовы предложить эксклюзивные условия сотрудничества!</p>
+                    </div>
+                    <div class="contact__panel">
+                        <form id="contactForm" action="order.php" method="POST" data-message-container="messageContainer" onsubmit="event.preventDefault(); submitContactForm();">
+                            <div class="box">
+                                <input type="text" placeholder="ФИО*" name="name" required>
+                                <input type="email" placeholder="E-mail*" name="email" required>
+                                <input type="text" id="productArticle" name="article" readonly>
+                                <input type="text" id="productPrice" name="price" readonly>
+                                <input type="hidden" id="productUrl" name="product_url" readonly>
+                            </div>
+                            <textarea placeholder="Сообщение" name="message" rows="4" required></textarea>
+                            <div class="box">
+                                <label for="pickupDate">Выберите дату, когда можно будет забрать заказ:</label>
+                                <input type="date" id="pickupDate" name="pickup_date" required>
+                            </div>
+                            <div class="box__poli">
+                                <input type="checkbox" id="privacyCheck" name="privacy_policy" required>
+                                <label for="privacyCheck">С настоящей политикой конфиденциальности и ее условиями ознакомлен и согласен.</label>
+                            </div>
+                            <button type="submit" class="btn btn--blue">Отправить</button>
+                        </form>
+                        <div id="messageContainer" style="display: none; color: green; text-align: center;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="popup.js"></script>
+<script src="script.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
